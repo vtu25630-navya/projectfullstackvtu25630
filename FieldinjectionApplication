@@ -1,0 +1,14 @@
+package com.example.fieldinjection;
+
+import org.springframework.boot.SpringApplication;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class FieldinjectionApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(FieldinjectionApplication.class, args);
+	}
+
+}
