@@ -1,0 +1,11 @@
+package com.example.fieldinjection;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class DiscountService {
+
+    public String applyDiscount() {
+        return "Discount Applied!";
+    }
+}
