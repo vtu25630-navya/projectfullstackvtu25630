@@ -1,0 +1,5 @@
+package com.example.fieldinjection;
+
+public interface NotificationService {
+    String sendNotification(String message);
+}
