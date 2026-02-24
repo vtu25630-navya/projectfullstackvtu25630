@@ -1,0 +1,22 @@
+package com.example.fieldinjection;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/notify")
+public class NotificationController {
+
+    private final NotificationService notificationService;
+
+    // Constructor Injection + Qualifier
+    public NotificationController(
+            @Qualifier("emailService") NotificationService notificationService) {
+        this.notificationService = notificationService;
+    }
+
+    @GetMapping
+    public String send(@RequestParam String message) {
+        return notificationService.sendNotification(message);
+    }
+}
